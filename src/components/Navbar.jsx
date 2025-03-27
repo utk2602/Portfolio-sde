@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav
       className="fixed top-0 w-full z-50 bg-primary"
     >
-      {/* Permanent mirror-like overlay effect */}
+      {/* Permanenffect */}
       <div 
         className="absolute inset-0 opacity-20 pointer-events-none" 
         style={{
