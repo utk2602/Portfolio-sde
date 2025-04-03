@@ -37,9 +37,9 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: "Utkarsh",
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: "utkarshkashyap4549@gmail.com",
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
@@ -70,10 +70,10 @@ const Contact = () => {
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
+        className='flex-[0.75] bg-white p-8 rounded-2xl' // Changed background to white
       >
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <p className={`${styles.sectionSubText} text-black`}>Get in touch</p> {/* Changed text color to black */}
+        <h3 className={`${styles.sectionHeadText} text-black`}>Contact.</h3> {/* Changed text color to black */}
 
         <form
           ref={formRef}
@@ -81,42 +81,42 @@ const Contact = () => {
           className='mt-12 flex flex-col gap-8'
         >
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Name</span>
+            <span className='text-black font-medium mb-4'>Your Name</span> {/* Changed text color to black */}
             <input
               type='text'
               name='name'
               value={form.name}
               onChange={handleChange}
               placeholder="What's your good name?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-gray-200 py-4 px-6 placeholder:text-gray-500 text-black rounded-lg outline-none border-none font-medium' // Adjusted colors
             />
           </label>
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your email</span>
+            <span className='text-black font-medium mb-4'>Your email</span> {/* Changed text color to black */}
             <input
               type='email'
               name='email'
               value={form.email}
               onChange={handleChange}
               placeholder="What's your web address?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-gray-200 py-4 px-6 placeholder:text-gray-500 text-black rounded-lg outline-none border-none font-medium' // Adjusted colors
             />
           </label>
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Message</span>
+            <span className='text-black font-medium mb-4'>Your Message</span> {/* Changed text color to black */}
             <textarea
               rows={7}
               name='message'
               value={form.message}
               onChange={handleChange}
               placeholder='What you want to say?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className='bg-gray-200 py-4 px-6 placeholder:text-gray-500 text-black rounded-lg outline-none border-none font-medium' // Adjusted colors
             />
           </label>
 
           <button
             type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
+            className='bg-gray-300 py-3 px-8 rounded-xl outline-none w-fit text-black font-bold shadow-md shadow-gray-500' // Adjusted colors
           >
             {loading ? "Sending..." : "Send"}
           </button>
